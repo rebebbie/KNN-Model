@@ -65,8 +65,8 @@ KNN_Model = Model()
 predictions = KNN_Model.fit_predict(X_train, y_train, X_test)
 
 accuracy = accuracy_score(y_test, predictions)
-print("Accuracy of the KNN model is:" + str(accuracy))
+print("Accuracy of the KNN model is: " + str(round(accuracy, 2)))
 
 plt.figure()
-plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap, edgecolor='k')
+plt.scatter(X[:,2], X[:,3], c=y, cmap=cmap, edgecolor='k', s=20)
 plt.show()
